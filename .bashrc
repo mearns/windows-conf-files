@@ -9,12 +9,17 @@ dive() {
     cd "$1"
 }
 
+export EDITOR=gvim
+export VISUAL=$EDITOR
+
 alias cd..="cd .."
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-#alias cd='pushd'
-#alias back='popd'
+alias pd='pushd'
+alias pop='popd'
 
+eval "$(thefuck --alias)"
+eval "$(thefuck --alias crap)"
 

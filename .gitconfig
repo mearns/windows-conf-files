@@ -1,17 +1,21 @@
 [push]
-	default = simple
+    default = simple
 [user]
-	name = Brian Mearns
-	email = bmearns@ieee.org
+    name = Brian Mearns
+    email = bmearns@ieee.org
 [core]
     excludesfile = ~/.gitignore-global
+    autocrlf = true
+[merge]
+    #Don't ever fast forward with a merge.
+    ff = false
 [alias]
-	cfg = config
-	ci = commit
-	co = checkout
-	st = status
-	stat = status
-	tags = tag
+    cfg = config
+    ci = commit
+    co = checkout
+    st = status
+    stat = status
+    tags = tag
     addall = add -A
     aa = add -A
     unstage = reset HEAD --

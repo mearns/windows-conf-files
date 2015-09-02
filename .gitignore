@@ -6,3 +6,7 @@ Files
 .ssh
 .ivy2
 .hgext
+.chef
+.idlerc
+.ipython
+.rnd
