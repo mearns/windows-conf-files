@@ -23,3 +23,7 @@ alias pop='popd'
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias crap)"
 
+echo -en '\n\033[1;34m'
+date +"Today is %A, %B %e, %Y." | tr -d '\n'
+echo -en '\033[0m'
+
