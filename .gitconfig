@@ -6,6 +6,7 @@
 [core]
     excludesfile = ~/.gitignore-global
     autocrlf = true
+	pager = cat
 [merge]
     #Don't ever fast forward with a merge.
     ff = false

@@ -7,6 +7,9 @@ Files
 .ivy2
 .hgext
 .chef
+.chefdk
 .idlerc
 .ipython
 .rnd
+.Rhistory
+
