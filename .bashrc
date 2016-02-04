@@ -21,6 +21,9 @@ alias pd='pushd'
 alias pop='popd'
 alias so='source'
 
+#Fix knife on windows
+alias knife=knife.bat
+
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias crap)"
 
@@ -31,3 +34,6 @@ echo -en '\n\033[1;34m'
 date +"Today is %A, %B %e, %Y."
 echo -en '\033[0m'
 
+
+export NVM_DIR="/h/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
