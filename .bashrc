@@ -21,8 +21,9 @@ alias pd='pushd'
 alias pop='popd'
 alias so='source'
 
-#Fix knife on windows
+#Fix chef in bash on windows
 alias knife=knife.bat
+alias kitchen=kitchen.bat
 
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias crap)"
