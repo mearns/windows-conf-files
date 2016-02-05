@@ -24,6 +24,7 @@ alias so='source'
 #Fix chef in bash on windows
 alias knife=knife.bat
 alias kitchen=kitchen.bat
+alias berks=berks.bat
 
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias crap)"
