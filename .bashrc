@@ -22,6 +22,7 @@ alias pop='popd'
 alias so='source'
 
 #Fix chef in bash on windows
+alias chef=chef.bat
 alias knife=knife.bat
 alias kitchen=kitchen.bat
 alias berks=berks.bat
