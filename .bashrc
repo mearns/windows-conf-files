@@ -38,7 +38,7 @@ eval "$(thefuck --alias)"
 eval "$(thefuck --alias crap)"
 
 
-export PS1="\[\e[37;1m\][\[\e[36;1m\]\u\[\e[37;0m\]@\[\e[34;1m\]\h \[\e[32;1m\]\W\[\e[37;1m\]]\$ \[\e[0m\]"
+export PS1="\[\e[35m\]\D{%Y-%m-%d %H:%M}\[\e[0m\] \[\e[37;1m\][\[\e[36;1m\]\u\[\e[37;0m\]@\[\e[34;1m\]\h \[\e[32;1m\]\W\[\e[37;1m\]]\$ \[\e[0m\]"
 
 echo -en '\n\033[1;34m'
 date +"Today is %A, %B %e, %Y."
