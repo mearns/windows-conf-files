@@ -15,4 +15,6 @@ Files
 .berkshelf/
 .gimp-*/
 .lesshst
+.erlang.cookie
+.gem/
 

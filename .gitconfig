@@ -2,7 +2,7 @@
     default = simple
 [user]
     name = Brian Mearns
-    email = bmearns@ieee.org
+	email = mearns.b@gmail.com
 [core]
     excludesfile = ~/.gitignore-global
     autocrlf = true
