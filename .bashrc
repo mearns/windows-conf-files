@@ -9,8 +9,8 @@ dive() {
     cd "$1"
 }
 
-export EDITOR=gvim
-export VISUAL=$EDITOR
+export EDITOR=vim
+export VISUAL=gvim
 
 alias cd..="cd .."
 alias ..="cd .."
@@ -22,10 +22,17 @@ alias pop='popd'
 alias so='source'
 
 #Fix chef in bash on windows
-alias chef=chef.bat
-alias knife=knife.bat
-alias kitchen=kitchen.bat
-alias berks=berks.bat
+if [[ `uname -s` =~ ^CYGWIN_NT.* ]] || [[ `uname -s` =~ ^MINGW32_NT.* ]] || [[ `uname -s` =~ ^WindowsNT.* ]]
+then
+    alias chef=chef.bat
+    alias knife=knife.bat
+    alias kitchen=kitchen.bat
+    alias berks=berks.bat
+    alias bundle=bundle.bat
+    alias rubocop=rubocop.bat
+    alias thor=thor.bat
+    alias foodcritic=foodcritic.bat
+fi
 
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias crap)"
