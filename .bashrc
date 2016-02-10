@@ -34,8 +34,11 @@ then
     alias foodcritic=foodcritic.bat
 fi
 
-eval "$(thefuck --alias)"
-eval "$(thefuck --alias crap)"
+if command -v thefuck >/dev/null 2>&1
+then
+    eval "$(thefuck --alias)"
+    eval "$(thefuck --alias crap)"
+fi
 
 
 export PS1="\[\e[35m\]\D{%Y-%m-%d %H:%M}\[\e[0m\] \[\e[37;1m\][\[\e[36;1m\]\u\[\e[37;0m\]@\[\e[34;1m\]\h \[\e[32;1m\]\W\[\e[37;1m\]]\$ \[\e[0m\]"
