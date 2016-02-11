@@ -54,7 +54,23 @@ if [ -e ~/.workstation ]
 then
     hosthash=0
 else
-    hosthash=`hostname | md5sum`
+    if command -v sha1sum >/dev/null 2>&1
+    then
+        hashfunc=sha1sum
+    else
+        if command -v md5sum >/dev/null 2>&1
+        then
+            hashfunc=md5sum
+        else
+            if command -v xxd >/dev/null 2>&1
+            then
+                hashfunc="xxd -pu"
+            else
+                hashfunc=cat
+            fi
+        fi
+    fi
+    hosthash=`hostname | ${hashfunc}`
 fi
 
 case $hosthash in
