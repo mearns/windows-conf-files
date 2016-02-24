@@ -21,7 +21,9 @@ alias pd='pushd'
 alias pop='popd'
 alias so='source'
 
-#Fix chef in bash on windows
+alias path='echo $PATH | tr ":" "\n"'
+
+#Fix some stuff for bash on windows
 if [[ `uname -s` =~ ^CYGWIN_NT.* ]] || [[ `uname -s` =~ ^MINGW32_NT.* ]] || [[ `uname -s` =~ ^WindowsNT.* ]]
 then
     alias chef=chef.bat
@@ -29,9 +31,13 @@ then
     alias kitchen=kitchen.bat
     alias berks=berks.bat
     alias bundle=bundle.bat
+    alias bundler=bundler.bat
     alias rubocop=rubocop.bat
     alias thor=thor.bat
     alias foodcritic=foodcritic.bat
+    alias gem=gem.bat
+    alias atom=atom.cmd
+    alias irb=irb.bat
 fi
 
 if command -v thefuck >/dev/null 2>&1
