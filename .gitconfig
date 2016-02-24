@@ -14,7 +14,8 @@
     co = checkout
     st = status
     stat = status
-    tags = tag
+    tags = show-ref --tags
+    show-tag = rev-list -n 1
     addall = add -A
     aa = add -A
     unstage = reset HEAD --
