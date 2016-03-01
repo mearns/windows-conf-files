@@ -1,5 +1,13 @@
 #!/bin/bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+LOCAL_BASHRC="${DIR}/.local.bashrc"
+
+if [ -f "${LOCAL_BASHRC}" ]
+then
+. "${LOCAL_BASHRC}"
+fi
+
 # Create a directory if it doesn't exist, and change directories
 # into it.
 dive() {
@@ -8,6 +16,7 @@ dive() {
     fi
     cd "$1"
 }
+
 
 export EDITOR=vim
 export VISUAL=gvim
@@ -20,6 +29,7 @@ alias .....="cd ../../../.."
 alias pd='pushd'
 alias pop='popd'
 alias so='source'
+alias bashrc='. ~/.bashrc'
 
 alias path='echo $PATH | tr ":" "\n"'
 
@@ -38,6 +48,7 @@ then
     alias gem=gem.bat
     alias atom=atom.cmd
     alias irb=irb.bat
+    alias aws=aws.cmd
 fi
 
 if command -v thefuck >/dev/null 2>&1

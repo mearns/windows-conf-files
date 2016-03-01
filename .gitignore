@@ -18,4 +18,6 @@ Files
 .erlang.cookie
 .gem/
 .workstation
-
+.aws/
+.thumbnails/
+.local.bashrc
