@@ -31,6 +31,14 @@ alias pop='popd'
 alias so='source'
 alias bashrc='. ~/.bashrc'
 
+# Refresh the terminal after a resize, to get text wrapping fixed.
+alias refresh='kill -WINCH $$'
+
+if [[ `uname -s` =~ ^CYGWIN_NT.* ]]
+then
+    alias winpath=`cygpath -w`
+fi
+
 alias path='echo $PATH | tr ":" "\n"'
 
 #Fix some stuff for bash on windows
