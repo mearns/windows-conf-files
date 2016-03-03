@@ -36,7 +36,7 @@ alias refresh='kill -WINCH $$'
 
 if [[ `uname -s` =~ ^CYGWIN_NT.* ]]
 then
-    alias winpath=`cygpath -w`
+    alias winpath='cygpath -w'
 fi
 
 alias path='echo $PATH | tr ":" "\n"'
