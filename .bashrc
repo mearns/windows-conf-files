@@ -139,5 +139,3 @@ date +"Today is %A, %B %e, %Y."
 echo -en '\033[0m'
 
 
-export NVM_DIR="/h/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
