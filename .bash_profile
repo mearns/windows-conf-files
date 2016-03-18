@@ -4,8 +4,6 @@
 # when an interactive non-login shell is started (e.g., opening a new terminal
 # window).
 
-echo "Sourcing .bash_profile..."
-
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . "${DIR}/.allbashrc"
 

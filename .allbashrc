@@ -2,11 +2,9 @@
 #
 # Common bash stuff that we want for all bash shells: login and non-login interactive.
 
-echo "Sourcing .allbashrc..."
-
 case "$-" in
-*i*)	echo This shell is interactive ;;
-*)	echo This shell is not interactive ;;
+*i*)    interactive=1 ;;
+*)	    interactive=0 ;;
 esac
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -135,6 +133,15 @@ case $hosthash in
 esac
 
 export PS1='${col_date}\D{%Y-%m-%d %H:%M}${col_none} ${col_text}[${col_user}\u${col_text}@${col_host}\h${col_none} ${col_cdir}\W${col_text}]\$ ${col_none}'
+
+# Print the date.
+if [[ "$interactive" == "1" ]]
+then
+    echo -en '\n\033[1;34m'
+    date +"Today is %A, %B %e, %Y."
+    echo -en '\033[0m'
+fi
+
 
 
 # Load local variant
