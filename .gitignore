@@ -21,3 +21,5 @@ Files
 .aws/
 .thumbnails/
 .local.bashrc
+.dia/
+.local.*
