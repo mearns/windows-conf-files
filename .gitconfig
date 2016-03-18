@@ -2,11 +2,11 @@
     default = simple
 [user]
     name = Brian Mearns
-	email = bmearns@commercehub.com
+    email = bmearns@commercehub.com
 [core]
     excludesfile = ~/.gitignore-global
     autocrlf = true
-	pager = cat
+    pager = cat
 [merge]
 [alias]
     cfg = config
