@@ -5,7 +5,7 @@
     email = bmearns@commercehub.com
 [core]
     excludesfile = ~/.gitignore-global
-    autocrlf = true
+    eol = lf
     pager = cat
 [merge]
 [alias]
