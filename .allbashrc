@@ -12,6 +12,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export EDITOR=vim
 export VISUAL=gvim
 
+# Source nvm.sh
+export NVM_DIR="/Users/bmearns/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Create a directory if it doesn't exist, and change directories
 # into it.
 dive() {
@@ -31,6 +35,7 @@ alias pop='popd'
 alias so='source'
 alias bashrc='. ~/.bashrc'
 alias path='echo $PATH | tr ":" "\n"'
+alias mygroups='id -Gn | tr " " "\n"'
 
 # Refresh the terminal after a resize, to get text wrapping fixed.
 alias refresh='kill -WINCH $$'
@@ -132,7 +137,7 @@ case $hosthash in
     ;;
 esac
 
-export PS1='${col_date}\D{%Y-%m-%d %H:%M}${col_none} ${col_text}[${col_user}\u${col_text}@${col_host}\h${col_none} ${col_cdir}\W${col_text}]\$ ${col_none}'
+export PS1='\[${col_date}\]\D{%Y-%m-%d %H:%M}\[${col_none}\] \[${col_text}\][\[${col_user}\]\u\[${col_text}\]@\[${col_host}\]\h\[${col_none}\] \[${col_cdir}\]\W\[${col_text}\]]\$ \[${col_none}\]'
 
 # Print the date.
 if [[ "$interactive" == "1" ]]
