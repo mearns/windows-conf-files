@@ -12,10 +12,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export EDITOR=vim
 export VISUAL=gvim
 
-# Source nvm.sh
-export NVM_DIR="/Users/bmearns/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # Create a directory if it doesn't exist, and change directories
 # into it.
 dive() {
